@@ -1,0 +1,168 @@
+<html>
+<head>
+<style>
+
+#top
+{
+    text-align : center;
+    width: 50px;
+}
+#sun
+{
+    text-align : center;
+    color:red;
+}
+#sat
+{
+    text-align : center;
+    color:blue;
+}
+#nor
+{
+    text-align : center;
+}
+table {
+  border: 1px solid skyblue;
+  border-collapse: collapse;
+  
+
+}
+th, td{
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    width: 70px;
+    height:20px
+}
+button {
+padding: 0;
+border: none;
+background: none;
+}
+
+</style>
+</head>
+
+<body>
+<table >
+    <tr><td colspan="7" id="top">2021년 12월</td></tr>
+<tr>
+    <td id="sun">Sun</td>
+    <td id="nor">Mon</td>
+    <td id="nor">Tue</td>
+    <td id="nor">Web</td>
+    <td id="nor">Thu</td>
+    <td id="nor">Fri</td>
+    <td id="sat">Sat</td>
+</tr>
+
+<tr>
+    <td id="sun"></td>
+    <td id="nor"></td>
+    <td id="nor"></td>
+    <td id="nor">1 <br>
+    <input type="checkbox" name="week1" value="1" id="checkbox1">
+    </td>
+    <td id="nor">2 <br>
+    <input type="checkbox" name="week1" value="1" id="checkbox1">
+    </td>
+    <td id="nor">3 <br>
+    <input type="checkbox" name="week1" value="1" id="checkbox1">
+    </td>
+    <td id="sat">4 <br>
+    <input type="checkbox" name="week1" value="1" id="checkbox1">
+    </td>
+    </tr>
+
+<tr>
+    <td id="sun">5 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td>
+    <td id="nor">6 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td></td>
+    <td id="nor">7 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td></td>
+    <td id="nor">8 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td>></td>
+    <td id="nor">9 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td></td>
+    <td id="nor">10 <br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td></td>
+    <td id="sat">11<br>
+    <input type="checkbox" name="week2" value="1" id="checkbox1">
+    </td>
+</tr>
+
+<tr>
+    <td id="sun"><button onclick="check()">12</button></td>
+    <td id="nor"><button onclick="check()">13</button></td>
+    <td id="nor"><button onclick="check()">14</button></td>
+    <td id="nor"><button onclick="check()">15</button></td>
+    <td id="nor"><button onclick="check()">16</button></td>
+    <td id="nor"><button onclick="check()">17</button></td>
+    <td id="sat"><button onclick="check()">18</button></td>
+</tr>
+
+<tr>
+    <td id="sun"><button onclick="check()">19</button></td>
+    <td id="nor"><button onclick="check()">20</button></td>
+    <td id="nor"><button onclick="check()">21</button></td>
+    <td id="nor"><button onclick="check()">22</button></td>
+    <td id="nor"><button onclick="check()">23</button></td>
+    <td id="nor"><button onclick="check()">24</button></td>
+    <td id="sat"><button onclick="check()">25</button></td>
+</tr>
+
+<tr>
+    <td id="sun"><button onclick="check()">26</button></td>
+    <td id="nor"><button onclick="check()">27</button></td>
+    <td id="nor"><button onclick="check()">28</button></td>
+    <td id="nor"><button onclick="check()">29</button></td>
+    <td id="nor"><button onclick="check()">30</button></td>
+    <td id="nor"><button onclick="check()">31</button></td>
+    <td id="sat"></td>
+</tr>
+
+</table>
+<div class="container" style="text-align : center; margin-bottom:10px;"><button id="send" ><span class="submit" id="send">계산하기</span></button> </div>
+</div>
+
+<div>총 근무 일수 : <span id="day"></span></div>
+<div>주휴 수당 : <span id="weekly"></span></div>
+<div>월 급여 (세전) : <span id="month"></span></div>
+
+<script>
+var count =0;
+
+window.onload = function() {
+document.getElementById('send').onclick = function(){
+
+var week1_length = document.getElementsByName("week1").length;
+var week2_length = document.getElementsByName("week2").length;
+
+for (var i=0; i<week1_length; i++) {
+    
+    if (document.getElementsByName("week1")[i].checked == true) {
+    count ++;
+    }
+        
+}
+for (var i=0; i<week2_length; i++) {
+    
+    if (document.getElementsByName("week2")[i].checked == true) {
+    count ++;
+    }
+        
+}
+document.getElementById('day').innerHTML=count;
+
+}
+}
+
+</script>
+</body>
+</html>
