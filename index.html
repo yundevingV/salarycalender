@@ -358,13 +358,15 @@ for (var i=0; i<week2_length; i++) {
 count = count1 +count2 + count3 + count4 + count5;
 ws = ws1+ws2+ws3+ws4+ws5;
 salary = salary1+salary2+salary3+salary4+salary5;
+var salary_txt = Number(salary).toLocaleString();
+var ws_txt = Number(ws).toLocaleString();
 
 
 
 
 document.getElementById('day').innerHTML=count;
-document.getElementById('weekly').innerHTML=ws;
-document.getElementById('month').innerHTML=salary;
+document.getElementById('weekly').innerHTML=ws_txt;
+document.getElementById('month').innerHTML=salary_txt;
 
 }
 }
